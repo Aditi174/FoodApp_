@@ -1,0 +1,143 @@
+.cartitem {
+  width: 100%;
+  height: 84.6%;
+  overflow: hidden;
+}
+
+.mask {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.mask::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.AllFoodItems {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+  padding-top: 10%;
+  width: 100%;
+}
+
+.items {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.foodimage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: sans-serif;
+}
+
+.column h3 {
+  color: rgb(72, 70, 70);
+  font-size: 25px;
+}
+.price {
+  color: rgb(214, 66, 66);
+  font-size: 18px;
+}
+
+
+@media screen and (max-width: 750px) {
+  .img {
+    height: 100%;
+  }
+  .cartitem {
+    height: 74%;
+  }
+  .AllFoodItems {
+    display: grid;
+    margin-top: 10%;
+    gap: 5%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .column h3 {
+    font-size: 15px;
+  }
+  .price {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .img {
+    height: 100%;
+  }
+  .cartitem {
+    height: 150vh;
+    overflow: hidden;
+  }
+  .AllFoodItems {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 80%;
+    gap: 20px;
+    margin-left: 17%;
+    width: 100%;
+  }
+  .column h3 {
+    font-size: 12px;
+  }
+  .price {
+    font-size: 12px;
+  }
+  .items{
+    width: 70%;
+  }
+  .itemtext{
+  font-size: 12px;
+  color: brown;
+}
+}
+
+
+@media screen and (max-width:400px){
+  .AllFoodItems {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 110%;
+    gap: 20px;
+    margin-left: 17%;
+    width: 100%;
+  }
+}
